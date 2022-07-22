@@ -6,6 +6,8 @@
 } 
 
 #footer {
+    width: 80%;
+    margin: auto;
     margin-top: 50px;
     display: grid;
     gap: 70px;
@@ -14,6 +16,8 @@
     color: #020202;
 }
 h5{
+    font-size: 18px;
+    margin-bottom: 15px;
     color: #11c2b3;
     font-family: Inter, sans-serif;
 }
@@ -45,4 +49,11 @@ h5{
     font-size: 13px;
     margin-bottom: 50px;
 }
- 
+
+#footer1 > p, #footer2>p, #footer3>p, #footer4>p, #footer5>p, #footer6>p{
+    margin-bottom: 20px;
+    color: #020202;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+} 

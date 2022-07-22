@@ -6,17 +6,14 @@ body{
      font-family: Inter,sans-serif;
      background-color: #fff;
 }
-#navbar{
-     height: 60px;
-     background-color: #fff;
-}
+
 #section_1{
      border:1px solid transparent;
      background: linear-gradient(180deg,#f2f6fb,#fdf9f9);
 }
 #container{
      text-align: center;
-     margin-top: 20px;
+     margin-top: 100px;
 }
 .img_sec{
      position: relative;
@@ -248,7 +245,11 @@ body{
      width: 80%;
      margin: auto;
      background-image: linear-gradient(to right,  #daf8f6, rgb(251, 228, 232));
-     height: 600px;
+    
+}
+#slide_2_change{
+     border: 1px solid transparent;
+     border-radius: 10px;
 }
 
 #slide_2_btn{
@@ -256,4 +257,123 @@ body{
      display: flex;
      justify-content: space-evenly;
      align-items: center;
+     margin-top: 40px;
+     cursor: pointer;
+     font-size: 16px;
+     font-weight: bold;
 }
+#slide_2_btn > p:hover {
+     color: #00baab;
+  
+}
+#slide_card{
+     display: flex;
+     align-items: center;
+     margin-top: 20px;
+}
+
+#card_text{
+     margin-left: 60px
+}
+
+#card_text h1{
+     font-size: 36px;
+     line-height: 1.2;
+     font-weight: 700;
+     margin-bottom: 0.2em;
+}
+#card_text p{
+     margin-bottom: 1.56em;
+     font-size: 18px;
+     line-height: 1.56;
+     color: #020202
+}
+
+#section_5{
+     margin-top: 80px;
+     background: linear-gradient(180deg,#f2f6fb,#fdf9f9);
+     border: 1px solid transparent;
+}
+#section_5 #content{
+     width: 60%;
+     margin: auto;
+     margin-top: 80px;
+     box-shadow: 0 2px 12px rgb(0 0 0 / 8%);
+     background-image: linear-gradient(to right, rgb(254, 254, 157), rgb(241, 188, 188), #fff,  rgb(241, 188, 188), rgb(183, 228, 250));
+     border: 1px solid transparent;
+}
+#content div:nth-child(1){
+     margin: 30px
+}
+#content div:nth-child(1) img{
+     width: 5%;
+     display: block;
+     margin: auto;
+     text-align: center;
+}
+
+#content div:nth-child(2){
+     text-align: center;
+     margin: 30px 0;
+     font-size: 26px;
+     line-height: 1.42;
+     font-style: italic;
+     font-weight: 400;
+     font-family: "Volkhov",sans-serif;
+}
+#content div:nth-child(3){
+     margin-bottom: 30px;
+}
+#content div:nth-child(3) p{
+     text-align: center;
+     line-height: 1.56;
+     text-transform: uppercase;
+     font-size: 14px;
+     color: #acbad0;
+     font-weight: 600;
+     letter-spacing: .15em;
+    
+}
+#content div:nth-child(3) .blk_clr{
+     color: #6c729c;
+}
+#section_5 div:last-child h3{
+     text-align: center;
+     margin-top: 60px;
+     margin-bottom: 80px;
+     font-size: 18px;
+     line-height: 1.56;
+     color: #00baab;
+}
+
+
+
+
+.slider {
+     height: 250px;
+     position: relative;
+     margin: auto;
+     width: 90%;
+     display: grid;
+     place-items: center;
+}
+
+.slide-track{
+     display: flex;
+     width: calc(150px * 9);
+     overflow: hidden;
+}
+.slide-track:hover{
+     animation-play-state: paused;
+}
+ 
+.slide{
+     height: 200px;
+     width: 250px;
+     display: flex;
+     align-items: center;
+     padding: 15px;
+     perspective: 100px;
+}
+
+
