@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks|Nifty</title>
+    <link rel="icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL1cJCGWQ7pkXpK8KLEjVNuIfU-ZL30WFAaA&usqp=CAU"
+        type="image/x-icon">
+    <link rel="stylesheet" href="display.css">
+    <style>
+        #nav1 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #navleft {
+            width: 60%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #navleft>div:hover {
+            color: rgb(11, 197, 197);
+            cursor: pointer;
+
+        }
+
+        #navright {
+            border: 1px solid grey;
+            padding: 5px;
+        }
+
+        #taskmanager {
+            display: flex;
+            margin-left: 100px;
+
+        }
+
+        #todo {
+            /* border: 1px solid red; */
+            width: 40%;
+            text-align: center;
+            margin-right: 30px;
+        }
+
+        #todo>h4 {
+            border: 1px solid grey;
+            padding: 2px;
+        }
+
+        /* #todoin{
+    border: 1px solid grey;
+    padding: 2px;
+} */
+        #todo>input {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            border: 1px solid grey;
+
+        }
+
+        #todobtn {
+            width: 100%;
+            margin-top: 8px;
+            padding: 5px;
+            background-color: transparent;
+            font-weight: 700;
+            color: rgb(8, 182, 182);
+            border: 1px solid grey;
+
+        }
+
+        #complete {
+            /* border: 1px solid red; */
+            width: 40%;
+            text-align: center;
+        }
+
+        #complete>h4 {
+            border: 1px solid grey;
+            padding: 2px;
+        }
+
+        .display_box {
+            border: 1px solid greenyellow;
+            padding-bottom: 10px;
+            margin-top: 10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .display_box>p {
+            margin-left: 5px;
+            margin-right: 10px;
+        }
+
+        #todoin {
+            height: 250px;
+            /* border: 1px solid red; */
+            overflow: scroll;
+            /* overflow: hidden; */
+            scrollbar-width: none;
+        }
+
+        #todoin::-webkit-scrollbar {
+            display: none;
+            height: 250px;
+        }
+
+        #todoin {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+
+
+        #completein {
+            height: 300px;
+            /* border: 1px solid red; */
+            overflow: scroll;
+            /* overflow: hidden; */
+            scrollbar-width: none;
+        }
+
+        #completein::-webkit-scrollbar {
+            display: none;
+            height: 250px;
+        }
+
+        #completein {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+
+            scrollbar-width: none;
+            /* Firefox */
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="nav">
+        <p id="user">USERNAME</p>
+        <input type="text" id="search" placeholder="Search">
+        <button>+ Create</button>
+        <div>13 Days on left trial</div>
+    </div>
+    <div id="sidebar">
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/128/49/49739.png" alt="">
+            <p> Overview</p>
+        </div>
+        <div> <img src="https://icons.veryicon.com/png/o/healthcate-medical/medical-icon-library/operation-workload.png"
+                alt="">
+            <p> Workloads</p>
+        </div>
+        <div>
+            <img src="https://i.pinimg.com/originals/8e/35/07/8e35072f9c083812e54cedaa7bf76e9f.jpg
+            " alt="">
+            <p>Calender</p>
+        </div>
+
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/128/6831/6831818.png" alt="">
+            <p>All Tasks</p>
+        </div>
+        <div>
+            <img src="https://i.pinimg.com/736x/7a/68/2a/7a682a3d23e1bc97aec6d5f81f06ea62.jpg" alt="">
+            <p> My Work</p>
+        </div>
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/128/32/32563.png" alt="">
+            <p>PORTFOLIOS</p>
+        </div>
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/128/271/271210.png" alt="">
+            <p>GENERAL</p>
+        </div>
+        <div id="user">
+            <img src="https://cdn-icons-png.flaticon.com/128/456/456212.png" alt="">
+            <p>DISPLAY</p>
+        </div>
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/128/271/271210.png" alt="">
+            <p>DIRECT MESSAGES</p>
+        </div>
+        <div id="start">
+            <p>Getting Started</p>
+        </div>
+    </div>
+    <div id="show">
+        <div id="inside">
+            <div id="nav1">
+                <div id="navleft">
+                    <div>Dashboard</div>
+                    <div>Roadmap</div>
+                    <div>Tasks</div>
+                    <div>Discussions</div>
+                    <div>Docs</div>
+                    <div>Files</div>
+                    <div>...</div>
+                </div>
+                <div id="navright">Kanban View ></div>
+            </div>
+            <hr>
+
+            <div id="taskmanager">
+                <div id="todo">
+                    <h4>TO DO</h4>
+                    <div id="todoin">
+                        <!-- append Here -->
+                    </div>
+                    <input id="input" type="text" placeholder="ADD TASK">
+                    <button id="todobtn">Add a new task</button>
+
+                </div>
+                <div id="complete">
+                    <h4>COMPLETE</h4>
+                    <div id="completein"></div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    let name = JSON.parse(localStorage.getItem("email"))
+    let user = document.querySelector("#user")
+    user.innerText = name[name.length - 1].email
+
+
+
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || []
+    document.querySelector("#todobtn").addEventListener("click", add_task)
+    // let arr =[]
+    function add_task() {
+        let value = document.getElementById("input").value
+        let obj = {
+            tasks: value
+        }
+        tasks.push(obj)
+        localStorage.setItem("tasks", JSON.stringify(tasks))
+        window.location.reload()
+    }
+    append(tasks)
+    function append(tasks) {
+        let container = document.querySelector("#todoin")
+        tasks.forEach(function (el, index) {
+            let div = document.createElement("div")
+
+            div.setAttribute("class", "display_box")
+            div.style.display = "flex"
+            let p = document.createElement("p")
+            let btn = document.createElement("button")
+            p.innerText = el.tasks
+            btn.innerText = "COMPLETE"
+            div.append(p, btn)
+            container.append(div)
+            btn.addEventListener("click", function () {
+                complete(el, index)
+            })
+
+
+        })
+    }
+    function complete(el, i) {
+        let obj = {
+            ctasks: el.tasks
+        }
+        comp_task.push(obj)
+        localStorage.setItem("ctasks", JSON.stringify(comp_task))
+        tasks.splice(i, 1)
+        localStorage.setItem("tasks", JSON.stringify(tasks))
+        window.location.reload()
+    }
+
+    let comp_task = JSON.parse(localStorage.getItem("ctasks")) || []
+
+
+    append2(comp_task)
+    function append2(comp_task) {
+        let container = document.querySelector("#completein")
+        comp_task.forEach(function (el, index) {
+            let div = document.createElement("div")
+            div.setAttribute("class", "display_box")
+            div.style.display = "flex"
+            let p = document.createElement("p")
+            // let btn = document.createElement("button")
+            p.innerText = el.ctasks
+
+            div.append(p)
+            container.append(div)
+            // btn.addEventListener("click", function () {
+            //     complete(el, index)
+
+        })
+    }
+
+
+</script>

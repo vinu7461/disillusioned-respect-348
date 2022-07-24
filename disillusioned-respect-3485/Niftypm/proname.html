@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Project Home |Nifty</title>
+    <link rel="icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL1cJCGWQ7pkXpK8KLEjVNuIfU-ZL30WFAaA&usqp=CAU"
+        type="image/x-icon">
+    <link rel="stylesheet" href="proname.css">
+</head>
+
+<body>
+    <div id="nav">
+        <p id="user">USERNAME</p>
+        <input type="text" id="search" placeholder="Search">
+        <button>+ Create</button>
+        <div>13 Days on left trial</div>
+    </div>
+    <div id="first">
+        <input type="text" id="name" placeholder="Enter project name... ">
+        <select name="" id="sel1">
+            <option value="">GENERAL</option>
+        </select>
+        <div id="check">
+            <p>Project Privacy</p>
+            <input name="" type="checkbox">
+            <label for="">Public to General</label>
+            <input type="checkbox">
+            <label for="">Private</label>
+
+            <select name="" id="sel2">
+                <option value="">Kanban View</option>
+                <option value="">List View</option>
+                <option value=""> Calender View</option>
+                <option value="">Timeline View</option>
+            </select>
+        </div>
+        <div id="second">
+            <div id="para">
+                <p>BLANK PROJECT</p>
+                <p>NIFTY TEMPLATES</p>
+                <p>SAVED TEMPLATES</p>
+                <p>IMPORT FROM CSV</p>
+            </div>
+            <div id="plus">
+                <div id="plus1">+</div>
+                <p> Blank project</p>
+                <p>Set up a fully custom project and save it as a template later.</p>
+            </div>
+
+        </div>
+        <button>Configure</button>
+        <button id="create1">Create Project</button>
+        <img id="flo" src="https://arjunhore2611.nifty.pm/static/media/plant@2x.6a3837388a406279d53d.png" alt="">
+        <img id="paper" src="https://arjunhore2611.nifty.pm/static/media/paper@2x.1f9314dd70586b71f00e.png" alt="">
+
+    </div>
+</body>
+
+</html>
+<script>
+
+    let name = JSON.parse(localStorage.getItem("email"))
+    let user = document.querySelector("#user")
+    user.innerText = name[name.length - 1].email
+    document.querySelector("#create1").addEventListener("click", myfun)
+    function myfun() {
+        window.location.href = "display.html"
+    }
+</script>
